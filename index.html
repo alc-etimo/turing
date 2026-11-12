@@ -111,11 +111,11 @@ button:disabled{opacity:.35;cursor:not-allowed}
 .footer{padding:25px 0 35px;display:flex;justify-content:space-between;gap:18px;font-size:.75rem;color:#8794a8}
 .small-note{font-size:.76rem;color:var(--muted)}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}.aside{max-width:650px}.head{grid-template-columns:1fr;gap:10px}.skills{grid-template-columns:repeat(2,1fr)}.workflow{grid-template-columns:repeat(2,1fr)}.step+.step{padding-left:0;border-left:0}.step:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}.contact-panel{grid-template-columns:1fr;gap:22px}}
-@media(max-width:700px){.wrap{width:calc(100% - 32px)}.section{padding:66px 0}.navrow{min-height:66px}.menu{display:block}.nav{display:none;position:absolute;top:65px;left:0;right:0;padding:15px 20px 20px;background:#080d17;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex;animation:rise .18s ease}.nav a{padding:11px 0;border-bottom:1px solid var(--line)}.nav .contactlink{text-align:center;margin-top:10px}.hero{padding:67px 0 55px}.hero h1{font-size:clamp(2.8rem,13vw,4.3rem)}.summary{grid-template-columns:1fr;gap:22px}.metrics{grid-template-columns:repeat(2,1fr)}.skills,.cases,.tools,.education{grid-template-columns:1fr}.skill{min-height:unset}.job{grid-template-columns:1fr;gap:9px;padding:24px 0}.workflow{grid-template-columns:1fr}.step,.step+.step,.step:nth-child(even){padding:18px 0;border-left:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.contact-panel{padding:27px 21px}.footer{flex-direction:column}.case-embed summary{padding:14px 16px;font-size:.86rem}.case-inner{padding:15px}.case-grid{grid-template-columns:1fr}.sample-table{font-size:.74rem}.workflow-controls{align-items:flex-start;flex-direction:column}}
+@media(max-width:700px){.case-embed summary{grid-template-columns:minmax(0,1fr) 28px;min-height:54px}.case-embed summary .details-hint{grid-column:1;grid-row:2;justify-self:start;margin-top:-8px}.case-embed summary:after{grid-column:2;grid-row:1 / span 2}.wrap{width:calc(100% - 32px)}.section{padding:66px 0}.navrow{min-height:66px}.menu{display:block}.nav{display:none;position:absolute;top:65px;left:0;right:0;padding:15px 20px 20px;background:#080d17;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex;animation:rise .18s ease}.nav a{padding:11px 0;border-bottom:1px solid var(--line)}.nav .contactlink{text-align:center;margin-top:10px}.hero{padding:67px 0 55px}.hero h1{font-size:clamp(2.8rem,13vw,4.3rem)}.summary{grid-template-columns:1fr;gap:22px}.metrics{grid-template-columns:repeat(2,1fr)}.skills,.cases,.tools,.education{grid-template-columns:1fr}.skill{min-height:unset}.job{grid-template-columns:1fr;gap:9px;padding:24px 0}.workflow{grid-template-columns:1fr}.step,.step+.step,.step:nth-child(even){padding:18px 0;border-left:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.contact-panel{padding:27px 21px}.footer{flex-direction:column}.case-embed summary{padding:14px 16px;font-size:.86rem}.case-inner{padding:15px}.case-grid{grid-template-columns:1fr}.sample-table{font-size:.74rem}.workflow-controls{align-items:flex-start;flex-direction:column}}
 @media(max-width:420px){.hero h1{font-size:2.7rem}.metrics{gap:8px}.metric{padding:13px}.metric strong{font-size:21px}.case-top{padding:18px 17px 0}.casebody{padding:16px 17px 18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 
-/* === Turing portfolio refresh: light PixAI-inspired system === */
+/* === Turing portfolio refresh: light Acclaro-inspired system === */
 :root{
  --bg:#f7f7f4;--surface:#ffffff;--surface-2:#edf1ed;--ink:#202523;--muted:#68716d;
  --line:#dfe4df;--blue:#235c52;--blue-2:#17483f;--blue-soft:#edf1ed;
@@ -142,8 +142,8 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
 .num,.eyebrow{color:var(--blue)}.eyebrow:before{background:currentColor}
 .skill:hover,.case:hover,.tool:hover,.edu:hover{border-color:#a6c2b6;box-shadow:var(--shadow)}
 .skills{gap:15px}.skill{min-height:210px}
-.case-grid-main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
-.case{min-height:0;border-radius:20px;overflow:hidden;position:relative}
+.case-grid-main{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
+.case{width:100%;min-height:0;border-radius:20px;overflow:hidden;position:relative}
 .case:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--blue),#88aa9b);transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
 .case:hover:before,.case:focus-within:before{transform:scaleX(1)}
 .case:after{display:none}.case-top{padding:23px 24px 0;align-items:center}.casebody{padding:16px 24px 24px}
@@ -208,6 +208,47 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
 @media(max-width:420px){.case-top{align-items:flex-start;flex-direction:column;gap:7px}.case-top .tag{align-self:flex-start}.card-metrics{grid-template-columns:1fr 1fr}.card-metrics>div:last-child{grid-column:1/-1}.taxonomy-tiles{grid-template-columns:1fr 1fr}.severity-options{gap:5px}.severity-option{padding:7px 9px}.record-line{grid-template-columns:1fr;gap:3px}.result-strip{grid-template-columns:auto 1fr auto}.issue-selectors{grid-template-columns:repeat(2,1fr)}}
 @media(prefers-reduced-motion:reduce){.hero:after,.loop-node.active{animation:none!important}.case-embed[open] .case-inner{animation:none!important}}
 
+
+/* === Full-width case studies / aligned accessible disclosures === */
+.case-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 22px;padding:16px 19px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.78)}
+.case-toolbar>span{display:flex;flex-direction:column;gap:3px}.case-toolbar strong{font-size:.88rem;color:var(--ink)}.case-toolbar small{font-size:.75rem;color:var(--muted)}
+.case-toolbar>div{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.case-control{border:1px solid var(--blue);background:var(--blue);color:#fff;border-radius:999px;padding:9px 15px;font-size:.76rem;font-weight:800;transition:transform .2s,box-shadow .2s,background .2s}
+.case-control:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(35,92,82,.16);background:var(--blue-2)}
+.case-control.secondary{background:#fff;color:var(--blue);border-color:#cbd8d1}.case-control.secondary:hover{background:#f1f6f2}
+.case-grid-main{grid-template-columns:minmax(0,1fr)!important;gap:22px!important}
+.case{width:100%;border-radius:20px}
+.case-top{min-height:58px}
+.casebody{padding-top:15px}
+.case-embed{margin-top:22px;box-shadow:0 3px 12px rgba(33,55,46,.035)}
+.case-embed summary{min-height:60px;display:grid;grid-template-columns:minmax(0,1fr) minmax(120px,auto) 30px;align-items:center;gap:16px;padding:14px 18px}
+.case-embed summary>span:first-child{justify-self:start}
+.case-embed summary .details-hint{justify-self:end;color:var(--muted);font-size:.72rem;font-weight:650}
+.case-embed summary:after{content:"+";justify-self:end;width:28px;height:28px;display:grid;place-items:center;border:1px solid #cbd8d1;border-radius:50%;background:#fff;color:var(--blue);font-size:1.1rem;line-height:1;transition:transform .25s,background .25s,color .25s}
+.case-embed[open] summary:after{content:"−";transform:none;background:var(--blue);color:#fff;border-color:var(--blue)}
+.case-embed .case-inner{animation:caseReveal .38s cubic-bezier(.2,.7,.2,1) both}
+@keyframes caseReveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.case-embed summary:hover{background:#edf4ef}
+.case-embed summary:focus-visible{outline:3px solid #77a596;outline-offset:3px;position:relative;z-index:1}
+.case .card-metrics{max-width:760px}
+.case .case-tags{margin-top:15px}
+.case .case-inner{padding:clamp(18px,3vw,30px)}
+.case .case-intro{max-width:900px}
+.case .case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.case .info-card{height:100%}
+.case .visual-heading{margin-top:28px}
+@media(max-width:700px){
+ .case-toolbar{align-items:flex-start;flex-direction:column}
+ .case-toolbar>div{width:100%}.case-control{flex:1}
+ .case-embed summary{grid-template-columns:minmax(0,1fr) 28px;gap:5px 10px;min-height:58px}
+ .case-embed summary .details-hint{grid-column:1;grid-row:2;justify-self:start;margin-top:-5px}
+ .case-embed summary:after{grid-column:2;grid-row:1 / span 2}
+ .case .case-grid{grid-template-columns:1fr}
+ .case .card-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:420px){.case .card-metrics{grid-template-columns:1fr 1fr}.case-top{align-items:flex-start;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.case-embed .case-inner{animation:none}.case-control,.case-embed summary:after{transition:none}}
+
 </style>
 </head>
 <body>
@@ -254,7 +295,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
 
 <section class="section" id="cases"><div class="wrap">
 <div class="head reveal"><div><div class="eyebrow">03 / Selected work</div><h2>Four cases. Four dimensions of quality.</h2></div><p>Evidence of functional quality leadership, AI-output auditing, product QA and structured-data validation. Each study opens inside its own card. Illustrative interfaces and sample records are explicitly identified; confidential client assets are not reproduced.</p></div>
-<div class="case-grid-main">
+<div class="case-toolbar" aria-label="Case study controls"><span><strong>Explore the evidence</strong><small>Four full-width case studies · expand any card for methods and examples</small></span><div><button type="button" class="case-control" id="expand-cases">Expand all</button><button type="button" class="case-control secondary" id="collapse-cases">Collapse all</button></div></div><div class="case-grid-main">
 
 <article class="case reveal case-team" id="case-01">
   <div class="case-top"><span class="num">CASE 01 / QUALITY OPERATIONS</span><span class="tag">Functional quality leadership</span></div>
@@ -372,9 +413,9 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
     <details class="case-embed" id="case-detail-03">
       <summary><span>Open case study</span><span class="details-hint">Interactive issue report · Audit method</span></summary>
       <div class="case-inner">
-        <div class="case-intro"><div class="eyebrow">PIXAI / PRODUCT LOCALIZATION QA</div><h3>From a UI observation to an actionable defect report</h3><p>Each issue was checked against the source, glossary, project instructions and user journey. Reports included category, severity, evidence, reproduction steps and a proposed correction.</p></div>
+        <div class="case-intro"><div class="eyebrow">ACCLARO / CONFIDENTIAL SOFTWARE BETA TESTING</div><h3>From a software test observation to an actionable defect report</h3><p>During confidential beta-testing of an enterprise creative-software suite, localized web and iOS interfaces were checked against the English source, glossary, project instructions and user journeys. Reports captured category, severity, evidence, reproduction steps and proposed corrections.</p></div>
         <h4 class="visual-heading">Explore an illustrative issue report</h4>
-        <p class="small-note">The examples below are synthetic demonstrations of report structure. They are not screenshots or defects copied from the client product.</p>
+        <p class="small-note">The examples below are synthetic demonstrations of the reporting method. They are not screenshots, actual defects or confidential material from the software suite.</p>
         <div class="issue-lab" id="pixai-issue-lab">
           <div class="issue-selectors" role="group" aria-label="Choose an illustrative QA issue">
             <button type="button" class="issue-type active" data-issue="terminology">Terminology</button>
@@ -383,7 +424,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
             <button type="button" class="issue-type" data-issue="fit">UI fit</button>
           </div>
           <div class="issue-window">
-            <div class="window-top"><span></span><span></span><span></span><small>ILLUSTRATIVE UI / PT-BR</small></div>
+            <div class="window-top"><span></span><span></span><span></span><small>SYNTHETIC UI / PT-BR</small></div>
             <div class="window-content">
               <div class="window-label">SAMPLE SCREEN</div>
               <h5 id="issue-screen-title">Settings</h5>
@@ -402,49 +443,51 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
         <h4 class="visual-heading">Minimum evidence for a useful QA handoff</h4>
         <div class="evidence-steps"><div><span>01</span><strong>Context</strong><small>Screen, journey and user action</small></div><div><span>02</span><strong>Evidence</strong><small>Screenshot and source / target</small></div><div><span>03</span><strong>Impact</strong><small>Meaning, usability or layout</small></div><div><span>04</span><strong>Correction</strong><small>Proposed fix and rationale</small></div></div>
         <div class="callout"><p><strong>Quality principle:</strong> a report should let another reviewer or product team reproduce the issue, understand its impact and verify the proposed correction without guessing.</p></div>
-        <div class="chips"><span class="chip">Black-box localization QA</span><span class="chip">UI testing</span><span class="chip">Issue categorization</span><span class="chip">Severity / priority</span><span class="chip">Reproducible evidence</span></div>
+        <div class="chips"><span class="chip">Exploratory beta testing</span><span class="chip">UI testing</span><span class="chip">Issue categorization</span><span class="chip">Severity / priority</span><span class="chip">Reproducible evidence</span></div>
       </div>
     </details>
   </div>
 </article>
 
-<article class="case reveal case-ibge" id="case-04">
-  <div class="case-top"><span class="num">CASE 04 / STRUCTURED DATA</span><span class="tag">Validation &amp; supervision</span></div>
+<article class="case reveal case-freelance" id="case-04">
+  <div class="case-top"><span class="num">CASE 04 / CONTENT QUALITY</span><span class="tag">Audiovisual review &amp; guideline compliance</span></div>
   <div class="casebody">
-    <span class="status">Additional professional experience</span>
-    <h3>Checking structured records for consistency and ambiguity</h3>
-    <p>Census-supervision work involving review of team submissions and validation of structured fields such as occupation and age against expected patterns.</p>
+    <span class="status">Professional experience · Freelance &amp; confidential review projects</span>
+    <h3>Maintaining quality across high-volume audiovisual workflows</h3>
+    <p>Long-term translation, linguistic review and subtitle QA combined with recent deadline-driven content review, evidence-based corrections and escalation of guideline ambiguities.</p>
     <div class="card-metrics">
-      <div><strong>Field-level</strong><span>consistency checks</span></div>
-      <div><strong>Pattern</strong><span>inconsistency detection</span></div>
-      <div><strong>Escalation</strong><span>ambiguous cases</span></div>
+      <div><strong>10,000+</strong><span>minutes of audiovisual translation &amp; QC</span></div>
+      <div><strong>1,000+</strong><span>hours of transcription</span></div>
+      <div><strong>300+</strong><span>hours of SDH captioning</span></div>
     </div>
-    <div class="case-tags"><span>Structured data</span><span>Validation rules</span><span>Consistency checks</span><span>Escalation judgment</span></div>
+    <div class="case-tags"><span>Guideline compliance</span><span>Content QA</span><span>Accuracy &amp; completeness</span><span>Escalation judgment</span></div>
     <details class="case-embed" id="case-detail-04">
-      <summary><span>Open case study</span><span class="details-hint">Synthetic data table · Validation logic</span></summary>
+      <summary><span>Open case study</span><span class="details-hint">Review scope · Evidence · Workflow</span></summary>
       <div class="case-inner">
-        <div class="case-intro"><div class="eyebrow">IBGE / CENSUS SUPERVISION</div><h3>Validate against criteria, not intuition</h3><p>The work involved reviewing team submissions and checking structured fields, including occupation and age. The transferable quality principle is to apply consistent validation criteria, identify recurring inconsistencies and escalate ambiguous cases instead of silently guessing.</p></div>
-        <div class="validation-demo" id="ibge-validation-demo">
-          <div class="validation-top"><div><span class="mini-label">INTERACTIVE VALIDATION VIEW</span><h4>Example field checks</h4></div><span class="demo-stamp">SYNTHETIC DATA</span></div>
-          <p class="small-note">All record IDs and values below are fabricated for demonstration. The range and checks are illustrative only; they are not official IBGE validation rules or real census microdata.</p>
-          <div class="validation-filters" role="group" aria-label="Filter example records">
-            <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All examples</button>
-            <button type="button" class="filter-btn" data-filter="flagged" aria-pressed="false">Flagged</button>
-            <button type="button" class="filter-btn" data-filter="valid" aria-pressed="false">Within demo schema</button>
-          </div>
-          <div class="table-scroll"><table class="validation-table"><thead><tr><th>Sample ID</th><th>Age field</th><th>Occupation field</th><th>Validation result</th></tr></thead><tbody>
-            <tr data-record-state="valid"><td>EX-001</td><td>34</td><td>Teacher</td><td><span class="record-status valid">Within demo schema</span></td></tr>
-            <tr data-record-state="flagged"><td>EX-002</td><td>250</td><td>Carpenter</td><td><span class="record-status flagged">Age out of illustrative range</span></td></tr>
-            <tr data-record-state="flagged"><td>EX-003</td><td>42</td><td><em>Blank</em></td><td><span class="record-status flagged">Required field missing</span></td></tr>
-          </tbody></table></div>
-          <div class="validation-summary" aria-live="polite"><div><strong id="validation-visible">3</strong><span>visible samples</span></div><div><strong>2</strong><span>flagged in this demo</span></div><div><strong>1</strong><span>within demo schema</span></div></div>
-        </div>
+        <div class="case-intro"><div class="eyebrow">FREELANCE / AUDIOVISUAL &amp; CONFIDENTIAL REVIEW</div><h3>Consistent decisions under delivery constraints</h3><p>Across agency and freelance projects, I translated, revised and quality-checked audiovisual and other specialized content. A recent confidential review assignment (September–November 2026) involved spoken content and on-screen text, time-sensitive delivery and rapid communication with project stakeholders.</p></div>
         <div class="case-grid">
-          <div class="info-card"><h4>Validation practices</h4><ul><li>Checked structured fields for consistency and plausible combinations.</li><li>Distinguished isolated entry issues from recurring patterns.</li><li>Documented uncertainty and sought clarification where values did not fit expected criteria.</li></ul></div>
-          <div class="info-card"><h4>Transferable quality principles</h4><ul><li>Validate against a defined schema or rule set.</li><li>Apply the same criteria consistently across submissions.</li><li>Escalate ambiguous cases rather than silently guessing.</li></ul></div>
+          <div class="info-card"><h4>Review dimensions</h4><ul>
+            <li>Compared target content with source audio/video, reference materials and project-specific instructions.</li>
+            <li>Checked accuracy, omissions, additions, terminology, register, readability, timing, segmentation and formatting.</li>
+            <li>Reviewed spoken language and on-screen text as part of the same content experience.</li>
+            <li>Identified ambiguous or underspecified cases and escalated them instead of making unsupported assumptions.</li>
+          </ul></div>
+          <div class="info-card"><h4>Operational discipline</h4><ul>
+            <li>Worked across remote, international and project-based delivery workflows.</li>
+            <li>Communicated review status and delivery estimates promptly in time-sensitive assignments.</li>
+            <li>Documented corrections and rationale against the relevant guidelines and reference materials.</li>
+            <li>Maintained quality while balancing deadlines, context and changing project requirements.</li>
+          </ul></div>
         </div>
-        <div class="callout"><p><strong>Relevance to quality operations:</strong> disciplined field validation, pattern recognition and escalation are useful foundations for reviewing structured data and labeling workflows. This experience is presented as data validation and supervision, not as AI annotation work.</p></div>
-        <div class="chips"><span class="chip">Data validation</span><span class="chip">Structured fields</span><span class="chip">Consistency checks</span><span class="chip">Ambiguity escalation</span></div>
+        <h4 class="visual-heading">A reproducible review handoff</h4>
+        <div class="evidence-steps">
+          <div><span>01</span><strong>Locate</strong><small>Timecode, screen or content segment</small></div>
+          <div><span>02</span><strong>Compare</strong><small>Source, target and project guidance</small></div>
+          <div><span>03</span><strong>Classify</strong><small>Error type, impact and rationale</small></div>
+          <div><span>04</span><strong>Resolve</strong><small>Correction, clarification or escalation</small></div>
+        </div>
+        <div class="callout"><p><strong>Confidentiality:</strong> client identities, protected content and project-specific operational details are intentionally omitted. The workflow description is generalized and does not reproduce client assets.</p></div>
+        <div class="chips"><span class="chip">Linguistic QA</span><span class="chip">Subtitle QC</span><span class="chip">Guideline compliance</span><span class="chip">Actionable corrections</span><span class="chip">Escalation management</span><span class="chip">Remote delivery</span></div>
       </div>
     </details>
   </div>
@@ -464,19 +507,18 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
 <div class="workflow-controls"><p id="workflow-label" aria-live="polite">STEP 1 / 5 · Clarify scope, source of truth, guidelines and acceptance criteria.</p><div class="arrow-group"><button class="arrow-btn" type="button" id="workflow-prev" aria-label="Previous workflow step" disabled>←</button><button class="arrow-btn" type="button" id="workflow-next" aria-label="Next workflow step">→</button></div></div>
 </div></section>
 
-<section class="section" id="experience"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">05 / Experience</div><h2>Hands-on review and quality operations.</h2></div><p>Relevant experience across enterprise content governance, AI-related language evaluation, localization QA and deadline-driven remote review.</p></div>
+<section class="section" id="experience"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">05 / Experience</div><h2>Hands-on review and quality operations.</h2></div><p>Relevant experience across enterprise content governance, AI-output auditing, confidential software beta-testing, localization QA and deadline-driven audiovisual review.</p></div>
 <div class="timeline">
-<div class="job reveal"><div class="meta"><strong>2020–Present</strong>Remote · Enterprise content</div><div><h3>Content Governance &amp; Linguistic QA — Functional Lead Responsibilities</h3><p><b>TeamWorker · Major telecommunications client</b></p><ul><li>Trained and mentored 15 writers and 15+ linguists; evaluated deliverables and delivered actionable feedback.</li><li>Created guidelines, editorial standards, controlled vocabularies, checklists and error-classification resources.</li><li>Supported AI-enabled CRM, chatbot and marketing content workflows, including 10,000+ content items.</li><li>Contributed to content and operational improvements associated with a 67% reduction in zero-result searches and an 18% improvement in resolution time.</li></ul></div></div>
-<div class="job reveal"><div class="meta"><strong>2022–Present</strong>Remote · Project-based</div><div><h3>Localization QA &amp; Language Quality Specialist</h3><p><b>Acclaro and multilingual language-quality projects</b></p><ul><li>Audited AI-generated subtitle outputs, categorized defects, assessed severity and provided structured feedback.</li><li>Proposed an 18-category error taxonomy with severity levels; the framework was adopted by the team.</li><li>Performed linguistic QA and MT evaluation against source material, terminology, style guides and client-specific criteria.</li><li>Recorded a 97% CRR in Acclaro MT Evaluation for 20 September–20 October 2026, against a 95% target.</li></ul></div></div>
-<div class="job reveal"><div class="meta"><strong>2015–Present</strong>Remote · Freelance and agency work</div><div><h3>Translator, Reviewer &amp; Audiovisual QA Specialist</h3><p><b>Tikinet · Vox Mundi · Moshi Media · VSI · Other providers</b></p><ul><li>Translated, revised and reviewed English-to-Brazilian Portuguese content across legal, technical, academic, digital and audiovisual domains.</li><li>Performed subtitle translation and QC, source-video review, SDH/CC, accuracy, timing, segmentation, reading-speed and formatting checks.</li><li>Worked with detailed specifications, reference materials and tight deadlines across remote international workflows.</li></ul></div></div>
-<div class="job reveal"><div class="meta"><strong>Sep–Nov 2026</strong>Remote · Project-based</div><div><h3>Brazilian Portuguese Content QA Reviewer</h3><p><b>OneVoice · Confidential project</b></p><ul><li>Reviewed audiovisual content against project-specific quality guidelines, including spoken content and on-screen text.</li><li>Worked within time-sensitive review and escalation workflows, maintaining rapid communication and delivery updates.</li><li>Client-specific content and operational details are intentionally omitted.</li></ul></div></div>
+<div class="job reveal"><div class="meta"><strong>2020–Present</strong>Remote · Enterprise content</div><div><h3>Content Governance &amp; Linguistic QA — Functional Lead Responsibilities</h3><p><b>TeamWorker · Enterprise telecommunications content</b></p><ul><li>Led functional quality activities, trained and mentored contributors, evaluated deliverables and provided actionable feedback.</li><li>Developed editorial standards, guidelines, controlled vocabularies, checklists and error-classification resources.</li><li>Supported AI-enabled CRM, chatbot and marketing content workflows, applying structured review criteria and terminology governance.</li><li>Analyzed recurring quality signals and translated findings into contributor guidance, workshops and process improvements.</li></ul></div></div>
+<div class="job reveal"><div class="meta"><strong>Selected projects · 2026</strong>Remote · Project-based</div><div><h3>Localization QA, AI Output Auditor, MT Evaluator &amp; Software Beta Tester</h3><p><b>Acclaro · AI language-quality and confidential enterprise software projects</b></p><ul><li>Audited AI-generated subtitle output, categorized defects, assessed severity and provided structured corrective feedback.</li><li>Proposed an 18-category error taxonomy with severity levels, adopted by the team.</li><li>Performed MT Evaluation and achieved a 97% CRR against a 95% target during 20 September–20 October 2026.</li><li>Executed exploratory, black-box beta testing of localized web and iOS interfaces for a confidential enterprise creative-software suite (NDA), reporting reproducible localization defects with evidence and proposed corrections.</li></ul></div></div>
+<div class="job reveal"><div class="meta"><strong>2015–Present</strong>Remote · Freelance and agency work</div><div><h3>Freelance Translator, Linguistic Reviewer &amp; Content QA Specialist</h3><p><b>Tikinet · Vox Mundi · Moshi Media · VSI · OneVoice (confidential project) · Other providers</b></p><ul><li>Translated, revised and quality-checked English-to-Brazilian Portuguese content across audiovisual, academic, legal, technical and digital domains.</li><li>Handled 10,000+ minutes of audiovisual translation and QC, alongside transcription and SDH/CC work.</li><li>Reviewed spoken language and on-screen text against project-specific guidelines in a recent confidential review assignment (September–November 2026).</li><li>Worked in time-sensitive remote workflows, communicating status promptly and escalating content or guideline ambiguities.</li></ul></div></div>
 </div></div></section>
 
 <section class="section" id="tools"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">06 / Tools &amp; working context</div><h2>Language expertise with operational context.</h2></div><p>Tools and formats are listed where supported by actual work or current learning. No proprietary client systems or confidential assets are reproduced.</p></div>
 <div class="tools">
 <article class="tool reveal"><h3>Quality and localization</h3><p>Linguistic QA · guideline interpretation · issue categorization · severity rationale · reviewer feedback · MTPE · subtitle QC · software/UI localization · source/target comparison · terminology</p></article>
 <article class="tool reveal"><h3>Structured information</h3><p>Controlled vocabularies · taxonomy application · metadata classification · spreadsheet-based tracking · quality reporting · HTML · XML · JSON · CSV · SRT</p></article>
-<article class="tool reveal"><h3>Tools and collaboration</h3><p>Subtitle Edit · Trados Studio · memoQ · Memsource/Phrase · Smartcat · Microsoft Excel · Google Workspace · Microsoft Teams · Trello · Miro</p></article>
+<article class="tool reveal"><h3>Tools and collaboration</h3><p>Subtitle Edit · Trados Studio · memoQ · Memsource/Phrase · Smartcat · Microsoft Excel · Salesforce · Jira · Microsoft Teams · Trello · Miro · Google Workspace</p></article>
 </div>
 <p class="small-note" style="margin-top:18px">Python is an active learning area and is not presented as an established production automation skill. Tools should be understood in the context of the projects in which they were used.</p>
 </div></section>
@@ -551,6 +593,28 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
       detail.querySelector('summary')?.focus({ preventScroll: true });
       detail.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
     });
+  });
+
+
+  // Case-study controls: expand/collapse all, with consistent accessible state.
+  const caseCards = $('.case-embed');
+  const expandCases = $('#expand-cases');
+  const collapseCases = $('#collapse-cases');
+  expandCases?.addEventListener('click', () => {
+    caseCards.forEach(detail => { detail.open = true; });
+    caseCards[0]?.querySelector('summary')?.focus({ preventScroll: true });
+  });
+  collapseCases?.addEventListener('click', () => {
+    caseCards.forEach(detail => { detail.open = false; });
+    collapseCases.focus({ preventScroll: true });
+  });
+  caseCards.forEach(detail => {
+    const summary = $('summary', detail);
+    const updateSummary = () => {
+      if (summary) summary.setAttribute('aria-expanded', String(detail.open));
+    };
+    updateSummary();
+    detail.addEventListener('toggle', updateSummary);
   });
 
   // Interactive five-stage QA workflow.
@@ -635,7 +699,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
     buttons.forEach((button, index) => button.setAttribute('aria-pressed', String(index === 0)));
   }
 
-  // Synthetic PixAI-style QA issue explorer.
+  // Synthetic Confidential software beta-testing issue explorer.
   const issueRoot = $('#pixai-issue-lab');
   if (issueRoot) {
     const issueData = {
@@ -679,28 +743,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
     buttons.forEach((button, index) => button.setAttribute('aria-pressed', String(index === 0)));
   }
 
-  // Filter only the fabricated examples in the IBGE validation demonstration.
-  const validationRoot = $('#ibge-validation-demo');
-  if (validationRoot) {
-    const filters = $$('[data-filter]', validationRoot);
-    const records = $$('[data-record-state]', validationRoot);
-    const visibleCount = $('#validation-visible');
-    filters.forEach(filter => filter.addEventListener('click', () => {
-      filters.forEach(item => {
-        const active = item === filter;
-        item.classList.toggle('active', active);
-        item.setAttribute('aria-pressed', String(active));
-      });
-      const type = filter.dataset.filter;
-      let visible = 0;
-      records.forEach(record => {
-        const show = type === 'all' || record.dataset.recordState === type;
-        record.hidden = !show;
-        if (show) visible++;
-      });
-      if (visibleCount) visibleCount.textContent = String(visible);
-    }));
-  }
+
 
 })();
 </script>
