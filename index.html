@@ -577,7 +577,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
   }
 
   // Each case can be expanded independently; the global controls also work as expected.
-  const caseDetails = $('.case-embed');
+  const caseDetails = document.querySelectorAll('.case-embed');
   caseDetails.forEach(detail => {
     detail.addEventListener('toggle', () => {
       if (detail.open) {
@@ -597,7 +597,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
 
 
   // Case-study controls: expand/collapse all, with consistent accessible state.
-  const caseCards = $('.case-embed');
+  const caseCards = document.querySelectorAll('.case-embed');
   const expandCases = $('#expand-cases');
   const collapseCases = $('#collapse-cases');
   expandCases?.addEventListener('click', () => {
