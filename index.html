@@ -416,7 +416,7 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
         <div class="case-intro"><div class="eyebrow">ACCLARO / CONFIDENTIAL SOFTWARE BETA TESTING</div><h3>From a software test observation to an actionable defect report</h3><p>During confidential beta-testing of an enterprise creative-software suite, localized web and iOS interfaces were checked against the English source, glossary, project instructions and user journeys. Reports captured category, severity, evidence, reproduction steps and proposed corrections.</p></div>
         <h4 class="visual-heading">Explore an illustrative issue report</h4>
         <p class="small-note">The examples below are synthetic demonstrations of the reporting method. They are not screenshots, actual defects or confidential material from the software suite.</p>
-        <div class="issue-lab" id="pixai-issue-lab">
+        <div class="issue-lab" id="acclaro-issue-lab">
           <div class="issue-selectors" role="group" aria-label="Choose an illustrative QA issue">
             <button type="button" class="issue-type active" data-issue="terminology">Terminology</button>
             <button type="button" class="issue-type" data-issue="accuracy">Accuracy</button>
@@ -576,13 +576,13 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
     revealItems.forEach(element => element.classList.add('visible'));
   }
 
-  // Keep one detailed case open at a time and reveal its content when expanded.
-  const caseDetails = $$('.case-embed');
+  // Each case can be expanded independently; the global controls also work as expected.
+  const caseDetails = $('.case-embed');
   caseDetails.forEach(detail => {
     detail.addEventListener('toggle', () => {
-      if (!detail.open) return;
-      caseDetails.forEach(other => { if (other !== detail) other.open = false; });
-      $$('.reveal', detail).forEach(element => element.classList.add('visible'));
+      if (detail.open) {
+        $('.reveal', detail).forEach(element => element.classList.add('visible'));
+      }
     });
   });
   $$('[data-open-detail]').forEach(button => {
@@ -699,8 +699,8 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,syste
     buttons.forEach((button, index) => button.setAttribute('aria-pressed', String(index === 0)));
   }
 
-  // Synthetic Confidential software beta-testing issue explorer.
-  const issueRoot = $('#pixai-issue-lab');
+  // Synthetic confidential software beta-testing issue explorer.
+  const issueRoot = $('#acclaro-issue-lab');
   if (issueRoot) {
     const issueData = {
       terminology: {
